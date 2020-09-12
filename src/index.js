@@ -39,6 +39,7 @@ window.handleSubmit = (event) => {
   const form = event.target;
   event.preventDefault();
   const answer = new FormData(form).get("answer");
+  if (!answer) return;
   if (current.correct === parseInt(answer, 0)) score++;
   let idx = questions.findIndex((i) => i === current);
   current = questions[++idx];
