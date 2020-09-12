@@ -46,6 +46,7 @@ h6 {
 
 #app {
   max-width: 100%;
+  padding: calc(var(--spacingStack) * 4);
 }
 
 a {
@@ -100,7 +101,7 @@ body {
 .container {
   width: 600px;
   max-width: 100%;
-  background: #fff;
+  background-color: var(--backgroundColor);
   overflow: hidden;
   border-radius: var(--borderRadius);
   box-shadow: 0 0.6rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
