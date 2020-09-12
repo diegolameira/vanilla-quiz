@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --backgroundColor: #f3f3fb;
+  --textColor: #2b2b2b;
+  --primaryColor: #4370e7;
+  --fontSize: 20px;
+  --borderRadius: 0.6rem;
+  --spacingStack: 0.6rem;
+  --spacingInline: 1rem;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: var(--fontSize);
+}
+
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--backgroundColor);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--textColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+#app {
+  max-width: 100%;
+}
+
+a {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+
+button {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  min-width: 6rem;
+  color: #fff;
+  padding: var(--spacingStack) var(--spacingInline);
+  background: var(--primaryColor);
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  font-weight: 600;
+}
+
+a:hover,
+button:hover {
+  filter: brightness(1.2);
+}
+
+a:active,
+button:active {
+  filter: brightness(0.8);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  width: 600px;
+  max-width: 100%;
+  background: #fff;
+  overflow: hidden;
+  border-radius: var(--borderRadius);
+  box-shadow: 0 0.6rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  list-style: none;
+  margin: var(--spacingStack) 0 calc(var(--spacingStack) * 4);
+  padding: 0 calc(var(--spacingInline) * 3);
+}
+
+ul li {
+  display: block;
+  font-size: 1rem;
+  padding: 0.4rem 0;
+  line-height: 1.2rem;
+}
+
+label {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2 {
+  color: #fff;
+  line-height: 1;
+}
+
+h2 {
+  font-weight: 400;
+  margin-bottom: calc(var(--spacingStack) * 4);
+}
+
+h3 {
+  padding: calc(var(--spacingStack) * 4) calc(var(--spacingInline) * 3) 0;
+}
+
+button {
+  width: 100%;
+  border-radius: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+input[type="radio"] + label:before,
+input[type="checkbox"] + label:before {
+  content: "";
+  margin-top: 0.1rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border: 2px solid rgba(100, 100, 100, 0.2);
+}
+
+input[type="radio"] + label:before {
+  border-radius: 100%;
+  margin-top: 0.05rem;
+}
+
+input[type="radio"]:hover + label:before,
+input[type="checkbox"]:hover + label:before {
+  background: var(--primaryColor);
+}
+
+input[type="radio"]:focus + label:before,
+input[type="checkbox"]:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+input[type="radio"]:checked + label:before,
+input[type="checkbox"]:checked + label:before {
+  background: var(--primaryColor);
+}
+
+input[type="radio"]:disabled + label,
+input[type="checkbox"]:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+
+input[type="radio"]:disabled + label:before,
+input[type="checkbox"]:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+
+input[type="radio"]:checked + label:after,
+input[type="checkbox"]:checked + label:after {
+  margin-top: 0.1rem;
+  content: "";
+  position: absolute;
+  left: 0.3rem;
+  top: 0.5rem;
+  background: white;
+  width: 3px;
+  height: 3px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+    4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
