@@ -2,4 +2,4 @@
 
 Just for fun
 
-![image](https://user-images.githubusercontent.com/1857527/92997006-35c54e80-f4e6-11ea-9152-76f4f6cf64c7.png)
+![image](https://user-images.githubusercontent.com/1857527/92997305-ad947880-f4e8-11ea-837e-d90967e447bb.png)
